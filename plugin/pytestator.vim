@@ -99,7 +99,7 @@ command! CreateTestForce    call CreateTestForce()
 command! RunTest            call RunTest()
 command! SwapWithTest       call SwapWithTest()
 
-map ,tc     :CreateTest<cr>
-map ,tF     :CreateTestForce<cr>
-map ,tr     :RunTest<cr>
-map ,s      :SwapWithTest<cr>
+noremap ,tc     :CreateTest<cr>
+noremap ,tF     :CreateTestForce<cr>
+noremap ,tr     :RunTest<cr>
+noremap ,s      :SwapWithTest<cr>
