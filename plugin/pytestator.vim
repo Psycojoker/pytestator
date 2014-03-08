@@ -53,7 +53,7 @@ fun! TestExist()
 endf
 
 fun SwapWithTest()
-    execute "w"
+    execute "u"
     if IsTest()
         execute "e " . substitute(expand("%"), "test_", "", "")
     elseif !TestExist()
