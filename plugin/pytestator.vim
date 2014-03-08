@@ -40,17 +40,6 @@ if !executable("python")
     finish
 endif
 
-set statusline+=%#error#%{HasUnitTest()}%*
-
-function! HasUnitTest()
-    if !TestExist() && !IsTest() && &filetype == "python"
-        let b:has_unit_test = "[" . "I NOT HAS UNIT TEST" . "]"
-    else
-        let b:has_unit_test = ""
-    endif
-    return b:has_unit_test
-endfunction
-
 fun! IsTest()
     if expand("%") =~ "^test_"
         return 1
